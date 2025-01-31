@@ -1,0 +1,91 @@
+@use "../global" as *;
+
+.c-pagination {
+}
+
+.c-pagination > nav {
+  gap: 0;
+  justify-content: center;
+}
+
+.c-pagination > nav > div {
+  display: flex;
+  gap: calc(20px / 375px * 100vw);
+  justify-content: center;
+  align-items: center;
+
+  @include mq("md") {
+    gap: 40px;
+  }
+}
+
+.c-pagination > nav > div > span {
+  font-size: get_vw(16);
+  font-weight: $font-weight-700;
+  line-height: 1;
+
+  @include mq("md") {
+    font-size: rem(16);
+  }
+
+  &.current {
+    width: calc(44px / 375px * 100vw);
+    height: calc(44px / 375px * 100vw);
+    position: relative;
+    display: grid;
+    place-items: center;
+
+    @include mq("md") {
+      width: 44px;
+      height: 44px;
+    }
+
+    &::after {
+      content: "";
+      width: calc(44px / 375px * 100vw);
+      height: calc(44px / 375px * 100vw);
+      border: 1px solid map-get($map: $color, $key: text);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+
+      @include mq("md") {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+}
+
+.c-pagination > nav > div > a {
+  font-size: get_vw(16);
+  font-weight: $font-weight-700;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition: opacity 0.3s;
+  position: relative;
+  transition: translate 0.1s ease;
+
+  @include mq("md") {
+    font-size: 16px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      translate: 0 -4px;
+      transition: translate 0.3s ease;
+    }
+  }
+}
+
+.c-pagination > nav > div > a > svg {
+    width: calc(8px / 375px * 100vw);
+    height: calc(12px / 375px * 100vw);
+  @include mq("md") {
+    width: 8px;
+    height: 12px;
+  }
+}

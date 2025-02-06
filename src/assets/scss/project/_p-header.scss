@@ -1,2 +1,78 @@
 @use "../global/" as *;
 
+.p-header {
+  height: 60px;
+  padding-block: 14px 13px;
+  background-color: #fff;
+
+  @include mq("md") {
+    height: 100px;
+  }
+}
+
+.p-header__inner {
+  padding-inline: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.p-header__logo {
+}
+
+.p-header__logo-link {
+  color: #023e78;
+  font-family: $font-family-Roboto;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.14px;
+}
+
+.p-header__nav-wrap {
+  display: none;
+}
+
+.p-header__nav {
+}
+
+.p-header__list {
+  display: flex;
+  gap: 46px;
+
+}
+
+.p-header__item {
+  position: relative;
+
+  &:not(:last-child) {
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 14px;
+      background-color: map-get($map: $color, $key: text);
+      rotate: 45deg;
+    }
+  }
+}
+
+.p-header__link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: $line-height-large;
+}
+
+.p-header__buttons {
+}
+
+.p-header__button {
+}
+
+.c-button {
+}
+
+.c-button--default {
+}
+
+.c-button--primary {
+}

@@ -1,31 +1,17 @@
 @use "../global/" as *;
 
 html {
-  overflow-x: hidden;
-  
-  &.js-open {
-    overflow-y: hidden;
-  }
+
 }
 
 body {
   width: 100%;
   font-family: $font-family-ja;
   font-weight: 400;
-  font-size: get_vw(16);
   line-height: $line-height-base;
   color: map-get($color, text);
   background-color: map-get($color, 'base');
   overflow-x: hidden;
-
-  &.js-open {
-    overflow-y: hidden;
-  }
-
-  @include mq(md) {
-    letter-spacing: normal;
-    font-size: rem(14);
-  }
 }
 
 summary {

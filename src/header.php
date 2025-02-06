@@ -23,7 +23,7 @@
       <div class="p-header__inner">
         <!-- p-header__logo -->
         <div class="p-header__logo">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global standard</a>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
         </div>
         <!-- /p-header__logo -->
         <!-- p-header__nav-wrap -->
@@ -45,17 +45,14 @@
               <li class="p-header__item">
                 <a href="" class="p-header__link">お知らせ</a>
               </li>
-              <li class="p-header__item">
-                <a href="" class="p-header__link"></a>
-              </li>
             </ul>
           </nav>
           <div class="p-header__buttons">
             <div class="p-header__button">
-              <a href="" class=" c-button c-button--default">資料ダウンロード</a>
+              <a href="" class="c-button c-button--default">資料ダウンロード</a>
             </div>
             <div class="p-header__button">
-              <a href="" class=" c-button c-button--primary">お問い合わせ</a>
+              <a href="" class="c-button c-button--primary">お問い合わせ</a>
             </div>
           </div>
         </div>
@@ -64,3 +61,13 @@
     </div>
   </header>
   <!-- /l-header -->
+
+  <!-- l-drawer-button -->
+  <div class="l-drawer-button">
+    <div class="p-drawer-button">
+      <span class="p-drawer-button__bar"></span>
+      <span class="p-drawer-button__bar"></span>
+      <span class="p-drawer-button__bar"></span>
+    </div>
+  </div>
+  <!-- l-drawer-button -->

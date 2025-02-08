@@ -1,42 +1,65 @@
 @use "../global/" as *;
 
 .p-drawer-content {
-
+  width: 100%;
+  height: 100%;
+  background-color: #023e78;
+  padding: 60px 20px 20px 20px;
+  overflow-y: auto;
 }
 
 .p-drawer-content__body {
-
+  width: 100%;
+  height: fit-content;
 }
 
 .p-drawer-content__list {
-
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  align-items: center;
 }
 
 .p-drawer-content__item {
-
 }
 
 .p-drawer-content__link {
-
+  color: map-get($map: $color, $key: base);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .p-drawer-content__buttons {
-
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .p-drawer-content__button {
-
+  text-align: center;
 }
 
 .p-drawer-content__button-link {
-
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  padding-block: 22px 21px;
+  padding-inline: 10px;
+  min-height: 68px;
+  min-width: 295px;
+  text-align: center;
+  
 }
 
 .p-drawer-content__button-link--transparent {
-
+  background-color: transparent;
+  color: map-get($map: $color, $key: base);
+  border: 1px solid currentColor;
 }
 
 .p-drawer-content__button-link--white {
-
+  background-color: map-get($map: $color, $key: base);
+  color: #023E78;
 }
-

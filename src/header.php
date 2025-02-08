@@ -64,7 +64,7 @@
 
   <!-- l-drawer-button -->
   <div class="l-drawer-button">
-    <div class="p-drawer-button">
+    <div id="js-drawer-button" class="p-drawer-button is-open">
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
@@ -73,7 +73,7 @@
   <!-- l-drawer-button -->
 
   <!-- l-drawer-content -->
-  <div class="l-drawer-content">
+  <div id="js-drawer-content" class="l-drawer-content is-open">
     <div class="p-drawer-content">
       <div class="p-drawer-content__body">
         <ul class="p-drawer-content__list">

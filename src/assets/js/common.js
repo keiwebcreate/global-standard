@@ -21,3 +21,65 @@
   // ページが読み込まれた時点でswitchViewport関数を実行
   switchViewport();
 })();
+
+
+// ハンバーガーメニュー
+document.addEventListener("DOMContentLoaded", () => {
+  //定義
+  const drawerIcon = document.querySelector("#js-drawer-button");
+  const drawer = document.querySelector("#js-drawer-content");
+  const drawerNavItem = document.querySelectorAll(
+    '.p-drawer-content__body a'
+  );
+  const headerHeight = document.querySelector('header').offsetHeight;
+  const breakpoint = 768;
+  let isMenuOpen = false;
+  let isMenuOpenAtBreakpoint = false;
+
+  //メニューを開くアニメーション
+  const openMenu = () => {
+    if (!drawer.classList.contains("is-open")) {
+      drawer.classList.add("is-open");
+      drawerIcon.classList.add("is-open");
+    }
+  }
+  //メニューを閉じるアニメーション
+  const closeMenu = () => {
+    if (drawer.classList.contains("is-open")) {
+      drawer.classList.remove("is-open");
+      drawerIcon.classList.remove("is-open");
+      isMenuOpen = false;
+    }
+  }
+  //メニューの開閉動作
+  const toggleMenu = () => {
+    if (!drawer.classList.contains("is-open")) {
+      openMenu();
+    } else {
+      closeMenu();
+    }
+  };
+  //リサイズ処理
+  const handleResize = () => {
+    const bp = breakpoint;
+    const windowWidth = window.innerWidth;
+    if (windowWidth > bp && isMenuOpenAtBreakpoint) {
+      closeMenu();
+    } else if (windowWidth <= bp && drawer.classList.contains("is-open")) {
+      isMenuOpenAtBreakpoint = true;
+    }
+  };
+
+  //アイコン クリック時
+  drawerIcon.addEventListener("click", toggleMenu);
+  //画面幅リサイズ時
+  window.addEventListener("resize", handleResize);
+  
+  //ページ内リンクメニュー クリック時
+  drawerNavItem.forEach(item => {
+    item.addEventListener("click", event => {
+      event.preventDefault();
+      closeMenu();
+    });
+  });
+});

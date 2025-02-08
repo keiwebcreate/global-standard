@@ -71,3 +71,37 @@
     </div>
   </div>
   <!-- l-drawer-button -->
+
+  <!-- l-drawer-content -->
+  <div class="l-drawer-content">
+    <div class="p-drawer-content">
+      <div class="p-drawer-content__body">
+        <ul class="p-drawer-content__list">
+          <li class="p-drawer-content__item">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-drawer-content__link">トップ</a>
+          </li>
+          <li class="p-drawer-content__item">
+            <a href="" class="p-drawer-content__link">当社について</a>
+          </li>
+          <li class="p-drawer-content__item">
+            <a href="" class="p-drawer-content__link">サービス</a>
+          </li>
+          <li class="p-drawer-content__item">
+            <a href="" class="p-drawer-content__link">導入事例</a>
+          </li>
+          <li class="p-drawer-content__item">
+            <a href="" class="p-drawer-content__link">お知らせ</a>
+          </li>
+        </ul>
+        <div class="p-drawer-content__buttons">
+          <div class="p-drawer-content__button">
+            <a href="" class="p-drawer-content__button-link p-drawer-content__button-link--transparent">資料ダウンロード</a>
+          </div>
+          <div class="p-drawer-content__button">
+            <a href="" class="p-drawer-content__button-link p-drawer-content__button-link--white">お問い合わせ</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /l-drawer-content -->

@@ -72,7 +72,10 @@
 
   <!-- l-drawer-button -->
   <div class="l-drawer-button">
-    <div id="js-drawer-button" class="p-drawer-button">
+    <div id="js-drawer-button" class="p-drawer-button"
+    aria-expanded="false"
+    aria-controls="js-drawer-content"
+    aria-label="ドロワーメニューを開閉">
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
@@ -81,7 +84,7 @@
   <!-- l-drawer-button -->
 
   <!-- l-drawer-content -->
-  <div id="js-drawer-content" class="l-drawer-content">
+  <div id="js-drawer-content" class="l-drawer-content" aria-hidden="true">
     <div class="p-drawer-content">
       <div class="p-drawer-content__body">
         <ul class="p-drawer-content__list">

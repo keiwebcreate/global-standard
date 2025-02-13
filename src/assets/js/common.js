@@ -22,19 +22,29 @@
   switchViewport();
 })();
 
-
 // ハンバーガーメニュー
 document.addEventListener("DOMContentLoaded", () => {
   //定義
   const drawerIcon = document.querySelector("#js-drawer-button");
   const drawer = document.querySelector("#js-drawer-content");
-  const drawerNavItem = document.querySelectorAll(
-    '.p-drawer-content__body a'
-  );
-  const headerHeight = document.querySelector('header').offsetHeight;
+  const drawerNavItem = document.querySelectorAll(".p-drawer-content__body a");
+  const headerHeight = document.querySelector("header").offsetHeight;
   const breakpoint = 1200;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
+
+  // 開閉に伴う属性の変更
+
+  drawerIcon.addEventListener("click", function () {
+    const expanded = drawerIcon.getAttribute("aria-expanded");
+    if (expanded) {
+      drawerIcon.setAttribute("aria-expanded", "false");
+      drawer.setAttribute("aria-hidden", "true");
+    } else {
+      drawerIcon.setAttribute("aria-expanded", "true");
+      drawer.setAttribute("aria-hidden", "false");
+    }
+  });
 
   //メニューを開くアニメーション
   const openMenu = () => {
@@ -42,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drawer.classList.add("is-open");
       drawerIcon.classList.add("is-open");
     }
-  }
+  };
   //メニューを閉じるアニメーション
   const closeMenu = () => {
     if (drawer.classList.contains("is-open")) {
@@ -50,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       drawerIcon.classList.remove("is-open");
       isMenuOpen = false;
     }
-  }
+  };
   //メニューの開閉動作
   const toggleMenu = () => {
     if (!drawer.classList.contains("is-open")) {
@@ -74,10 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
   drawerIcon.addEventListener("click", toggleMenu);
   //画面幅リサイズ時
   window.addEventListener("resize", handleResize);
-  
+
   //ページ内リンクメニュー クリック時
-  drawerNavItem.forEach(item => {
-    item.addEventListener("click", event => {
+  drawerNavItem.forEach((item) => {
+    item.addEventListener("click", (event) => {
       event.preventDefault();
       closeMenu();
     });

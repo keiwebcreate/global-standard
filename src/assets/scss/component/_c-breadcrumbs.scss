@@ -1,0 +1,23 @@
+@use "../global/" as *;
+
+.c-breadcrumbs {
+  padding-block: 9px;
+}
+
+.c-breadcrumbs__inner {
+  display: flex;
+  gap: 9.5px;
+  align-items: center;
+  padding-inline: 20px;
+
+  span {
+    color: #888;
+    font-size: 12px;
+    font-weight: 500;
+
+    &.current-item {
+      color: map-get($map: $color, $key: text);
+    }
+  }
+}
+

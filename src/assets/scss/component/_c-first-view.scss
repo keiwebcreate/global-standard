@@ -5,6 +5,10 @@
   position: relative;
   height: 250px;
   width: 100%;
+
+  @include mq("md") {
+    margin-top: 100px;
+  }
 }
 
 .c-first-view__bg {
@@ -20,6 +24,8 @@
   display: block;
   position: relative;
   z-index: 0;
+  width: 100%;
+  height: 100%;
 
   img {
     display: block;
@@ -47,6 +53,12 @@
     position: absolute;
     top: 0;
     left: 0;
+
+    @include mq("md") {
+      width: 365.654px;
+      background: url(../img/common/lower-mv-decoration_pc.svg) no-repeat center
+        center / contain;
+    }
   }
 }
 
@@ -57,6 +69,10 @@
   translate: 0 -50%;
   padding-inline: 21px;
   width: 100%;
+
+  @include mq("md") {
+    padding-inline: calc(223px / 1280px * 100vw);
+  }
 }
 
 .c-first-view__title {
@@ -65,12 +81,16 @@
 .c-first-view__title--en {
   color: #023e78;
   font-family: $font-family-en;
-  font-size: 32px;
+  font-size: rem(32);
   font-style: italic;
   font-weight: 500;
   background-color: map-get($map: $color, $key: base);
   padding-right: 2px;
   width: fit-content;
+
+  @include mq("md") {
+    font-size: 60px;
+  }
 }
 
 .c-first-view__title--ja {
@@ -81,4 +101,9 @@
   font-size: 16px;
   font-weight: 700;
   width: fit-content;
+
+  @include mq("md") {
+    font-size: 20px;
+    margin-left: -3px;
+  }
 }

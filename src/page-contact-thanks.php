@@ -19,6 +19,10 @@
       </div>
   </div>
   <!-- c-first-view -->
+
+  <?php get_template_part("template-parts/breadcrumbs"); ?>
+
+  
 </main>
 
 

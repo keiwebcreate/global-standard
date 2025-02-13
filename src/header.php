@@ -21,11 +21,19 @@
   <header class="l-header">
     <div class="p-header">
       <div class="p-header__inner">
+        <?php if (is_front_page()): ?>
+        <!-- p-header__logo -->
+        <h1 class="p-header__logo">
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
+        </h1>
+        <!-- /p-header__logo -->
+        <?php else: ?>
         <!-- p-header__logo -->
         <div class="p-header__logo">
           <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
         </div>
         <!-- /p-header__logo -->
+        <?php endif; ?>
         <!-- p-header__nav-wrap -->
         <div class="p-header__nav-wrap">
           <nav class="p-header__nav">
@@ -64,7 +72,7 @@
 
   <!-- l-drawer-button -->
   <div class="l-drawer-button">
-    <div id="js-drawer-button" class="p-drawer-button is-open">
+    <div id="js-drawer-button" class="p-drawer-button">
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
@@ -73,7 +81,7 @@
   <!-- l-drawer-button -->
 
   <!-- l-drawer-content -->
-  <div id="js-drawer-content" class="l-drawer-content is-open">
+  <div id="js-drawer-content" class="l-drawer-content">
     <div class="p-drawer-content">
       <div class="p-drawer-content__body">
         <ul class="p-drawer-content__list">

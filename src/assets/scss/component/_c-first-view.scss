@@ -1,0 +1,84 @@
+@use "../global/" as *;
+
+.c-first-view {
+  margin-top: 60px;
+  position: relative;
+  height: 250px;
+  width: 100%;
+}
+
+.c-first-view__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.c-first-view__image {
+  display: block;
+  position: relative;
+  z-index: 0;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.2);
+    position: absolute;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    width: 165.654px;
+    height: 250px;
+    background: url(../img/common/lower-mv-decoration_sp.svg) no-repeat center
+      center / contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.c-first-view__inner {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  translate: 0 -50%;
+  padding-inline: 21px;
+  width: 100%;
+}
+
+.c-first-view__title {
+}
+
+.c-first-view__title--en {
+  color: #023e78;
+  font-family: $font-family-en;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  background-color: map-get($map: $color, $key: base);
+  padding-right: 2px;
+  width: fit-content;
+}
+
+.c-first-view__title--ja {
+  margin-top: 8px;
+  margin-left: -1px;
+  background-color: map-get($map: $color, $key: base);
+  color: #023e78;
+  font-size: 16px;
+  font-weight: 700;
+  width: fit-content;
+}

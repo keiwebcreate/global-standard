@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     '.p-drawer-content__body a'
   );
   const headerHeight = document.querySelector('header').offsetHeight;
-  const breakpoint = 768;
+  const breakpoint = 1200;
   let isMenuOpen = false;
   let isMenuOpenAtBreakpoint = false;
 

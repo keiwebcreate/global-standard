@@ -25,7 +25,7 @@
 
 .p-drawer-content__link {
   color: map-get($map: $color, $key: base);
-  font-size: 16px;
+  font-size: rem(16);
   font-weight: 500;
 }
 
@@ -43,7 +43,7 @@
 .p-drawer-content__button-link {
   box-sizing: border-box;
   display: inline-block;
-  font-size: 16px;
+  font-size: rem(16);
   font-weight: 500;
   padding-block: 22px 21px;
   padding-inline: 10px;

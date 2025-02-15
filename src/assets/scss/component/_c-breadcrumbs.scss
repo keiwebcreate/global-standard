@@ -2,6 +2,10 @@
 
 .c-breadcrumbs {
   padding-block: 9px;
+
+  @include mq("md") {
+    padding-block: 10px;
+  }
 }
 
 .c-breadcrumbs__inner {
@@ -9,6 +13,12 @@
   gap: 9.5px;
   align-items: center;
   padding-inline: 20px;
+
+  @include mq("md") {
+    padding-inline: min(calc(90px / 1280px * 100vw), 90px);
+    max-width: 1280px;
+    margin-inline: auto;
+  }
 
   span {
     color: #888;
@@ -20,4 +30,3 @@
     }
   }
 }
-

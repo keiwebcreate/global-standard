@@ -22,7 +22,15 @@
 
   <?php get_template_part("template-parts/breadcrumbs"); ?>
 
-  
+  <div class="p-contact-thanks">
+    <div class="p-contact-thanks__inner">
+      <p class="p-contact-thanks__text">お問い合わせありがとうございました。<br>2日以内に担当者からメールにてご連絡いたしますので、しばらくお待ちいただけますと幸いです。</p>
+      <div class="p-contact-thanks__links">
+        <p class="p-contact-thanks__arrow">→</p>
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="p-contact-thanks__link">トップへ戻る</a>
+      </div>
+    </div>
+  </div>
 </main>
 
 

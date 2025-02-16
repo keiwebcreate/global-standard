@@ -36,8 +36,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 開閉に伴う属性の変更
 
   drawerIcon.addEventListener("click", function () {
-    const expanded = drawerIcon.getAttribute("aria-expanded");
-    if (expanded) {
+    const isOpen = drawerIcon.classList.contains("is-open");
+    console.log(isOpen);
+    if (isOpen) {
       drawerIcon.setAttribute("aria-expanded", "false");
       drawer.setAttribute("aria-hidden", "true");
     } else {

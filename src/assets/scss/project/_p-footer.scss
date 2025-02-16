@@ -1,0 +1,72 @@
+@use "../global/" as *;
+
+.p-footer {
+  background-color: map-get($map: $color, $key: text);
+  width: 100%;
+  padding-block: 70px 13px;
+}
+
+.p-footer__inner {
+  max-width: 375px;
+  margin-inline: auto;
+  padding-inline: 48px 47px;
+  color: map-get($map: $color, $key: base);
+}
+
+.p-footer__top {
+  color: inherit;
+}
+
+.p-footer__logo {
+  color: inherit;
+}
+
+.p-footer__logo-link {
+  color: inherit;
+  font-family: $font-family-Roboto;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.p-footer__address {
+  color: inherit;
+  margin-top: 22px;
+  padding-inline: 22px 23px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: $line-height-large;
+}
+
+.p-footer__zip-address,
+.p-footer__tel,
+.p-footer__fax {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.p-footer__tel {
+
+}
+
+.p-footer__fax {
+}
+
+.p-footer__bottom {
+  color: inherit;
+  margin-top: 38px;
+}
+
+.p-footer__copy {
+  color: inherit;
+  text-align: center;
+}
+
+.p-footer__copy-right {
+  color: inherit;
+  font-size: 12px;
+  font-weight: 500;
+}
+

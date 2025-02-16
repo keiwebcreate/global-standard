@@ -1,0 +1,11 @@
+@use "../global/" as *;
+
+.l-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 800;
+  mix-blend-mode: difference;
+}

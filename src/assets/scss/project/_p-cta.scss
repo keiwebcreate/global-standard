@@ -1,0 +1,112 @@
+@use "../global/" as *;
+
+.p-cta {
+}
+
+.p-cta__inner {
+}
+
+.p-cta__boxes {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-cta__box {
+  width: 100%;
+  padding-block: 46px 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.p-cta__box--download {
+  background: url(../img/common/common-photo-1-footer-download.webp) no-repeat
+    center center / cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 82, 162, 0.8);
+    z-index: 0;
+  }
+}
+
+.p-cta__box--contact {
+  background: url(../img/common/common-photo-2-footer-contact.webp) no-repeat
+    center center / cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: map-get($map: $color, $key: text2);
+    opacity: 0.8;
+    z-index: 0;
+  }
+}
+
+.p-cta__box-inner {
+  position: relative;
+  z-index: 2;
+  padding-inline: 40px;
+  max-width: 375px;
+  margin-inline: auto;
+}
+
+.p-cta__box-title {
+  color: map-get($map: $color, $key: base);
+}
+
+.p-cta__box-title--en {
+  text-align: center;
+  color: inherit;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.p-cta__box-title--ja {
+  color: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.p-cta__box-link {
+  margin-top: 40px;
+  border: 2px solid #fff400;
+  color: #fff400;
+  padding-block: 27px;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  min-height: 77px;
+  box-sizing: border-box;
+
+  svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    translate: 0 -50%;
+  }
+}
+
+.p-cta__box-link-text {
+  display: inline-block;
+  color: inherit;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 500;
+  padding-inline: 20px;
+  text-align: center;
+  width: 100%;
+  
+}

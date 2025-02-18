@@ -22,17 +22,17 @@
     <div class="p-header">
       <div class="p-header__inner">
         <?php if (is_front_page()): ?>
-        <!-- p-header__logo -->
-        <h1 class="p-header__logo">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
-        </h1>
-        <!-- /p-header__logo -->
+          <!-- p-header__logo -->
+          <h1 class="p-header__logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
+          </h1>
+          <!-- /p-header__logo -->
         <?php else: ?>
-        <!-- p-header__logo -->
-        <div class="p-header__logo">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
-        </div>
-        <!-- /p-header__logo -->
+          <!-- p-header__logo -->
+          <div class="p-header__logo">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-header__logo-link">Global Standard</a>
+          </div>
+          <!-- /p-header__logo -->
         <?php endif; ?>
         <!-- p-header__nav-wrap -->
         <div class="p-header__nav-wrap">
@@ -72,14 +72,14 @@
 
   <!-- l-drawer-button -->
   <div class="l-drawer-button">
-    <div id="js-drawer-button" class="p-drawer-button"
-    aria-expanded="false"
-    aria-controls="js-drawer-content"
-    aria-label="ドロワーメニューを開閉">
+    <button id="js-drawer-button" class="p-drawer-button"
+      aria-expanded="false"
+      aria-controls="js-drawer-content"
+      aria-label="ドロワーメニューを開閉">
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
       <span class="p-drawer-button__bar"></span>
-    </div>
+    </button>
   </div>
   <!-- l-drawer-button -->
 
@@ -116,3 +116,5 @@
     </div>
   </div>
   <!-- /l-drawer-content -->
+
+  <main class="l-main">

@@ -3,7 +3,11 @@
 .p-footer {
   background-color: map-get($map: $color, $key: text);
   width: 100%;
-  padding-block: 70px 13px;
+  padding-block: 68px 13px;
+
+  @include mq("md") {
+     padding-block: 120px 17px;
+  }
 }
 
 .p-footer__inner {
@@ -11,6 +15,11 @@
   margin-inline: auto;
   padding-inline: 48px 47px;
   color: map-get($map: $color, $key: base);
+
+  @include mq("md") {
+    max-width: calc(363px + 20px * 2);
+    padding-inline: 20px;
+  }
 }
 
 .p-footer__top {
@@ -27,6 +36,10 @@
   font-size: 40px;
   font-style: italic;
   font-weight: 700;
+
+  @include mq("md") {
+    font-size: 52px;
+  }
 }
 
 .p-footer__address {
@@ -36,6 +49,10 @@
   font-size: 14px;
   font-weight: 500;
   line-height: $line-height-large;
+
+  @include mq("md") {
+    padding-inline: 65px 63px;
+  }
 }
 
 .p-footer__zip-address,
@@ -56,7 +73,11 @@
 
 .p-footer__bottom {
   color: inherit;
-  margin-top: 38px;
+  margin-top: 34px;
+
+  @include mq("md") {
+    margin-top: 76px;
+  }
 }
 
 .p-footer__copy {
@@ -68,5 +89,9 @@
   color: inherit;
   font-size: 12px;
   font-weight: 500;
+  
+  @include mq("md") {
+    font-size: 14px;
+  }
 }
 

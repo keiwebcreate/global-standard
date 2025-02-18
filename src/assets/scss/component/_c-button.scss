@@ -13,7 +13,7 @@
   border: 1px solid currentColor;
   background-color: transparent;
   color: #023e78;
-  font-size: rem(14);
+  font-size: 14px;
   font-weight: 500;
   padding: 20px;
 }
@@ -21,8 +21,8 @@
 .c-button--primary {
   background-color: #023e78;
   color: map-get($map: $color, $key: base);
-  font-size: rem(14);
+  font-size: 14px;
   font-weight: 500;
-  line-height: $line-height-large; /* 171.429% */
+  line-height: $line-height-large;
   padding: 20px;
 }

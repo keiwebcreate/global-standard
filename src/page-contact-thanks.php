@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<main class="l-main">
+
   <!-- c-first-view -->
   <div class="c-first-view">
     <div class="c-first-view__bg">

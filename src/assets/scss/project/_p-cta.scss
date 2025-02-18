@@ -9,13 +9,22 @@
 .p-cta__boxes {
   display: flex;
   flex-direction: column;
+
+  @include mq("md") {
+    flex-direction: row;
+  }
 }
 
 .p-cta__box {
   width: 100%;
-  padding-block: 46px 25px;
+  padding-block: 45px 25px;
   position: relative;
   z-index: 1;
+
+  @include mq("md") {
+     padding-block: 55px 49px;
+
+  }
 }
 
 .p-cta__box--download {
@@ -57,6 +66,11 @@
   padding-inline: 40px;
   max-width: 375px;
   margin-inline: auto;
+
+  @include mq("md") {
+    max-width: calc(315px + 20px * 2);
+    padding-inline: 20px;
+  }
 }
 
 .p-cta__box-title {
@@ -66,10 +80,15 @@
 .p-cta__box-title--en {
   text-align: center;
   color: inherit;
+  font-family: $font-family-en;
   font-size: 40px;
   font-style: italic;
   font-weight: 500;
   text-transform: uppercase;
+  
+  @include mq("md") {
+    font-size: 60px;
+  }
 }
 
 .p-cta__box-title--ja {
@@ -84,29 +103,45 @@
   margin-top: 40px;
   border: 2px solid #fff400;
   color: #fff400;
-  padding-block: 27px;
+  padding-block: 26px;
   display: inline-block;
   position: relative;
   width: 100%;
   min-height: 77px;
   box-sizing: border-box;
 
+  @include mq("md") {
+    border: 3px solid #fff400;
+    padding-block: 31px 32px;
+    min-height: 98px;
+    margin-top: 37px;
+  }
+
   svg {
     position: absolute;
-    right: 20px;
+    right: 18px;
     top: 50%;
     translate: 0 -50%;
+
+    @include mq("md") {
+      right: 29px;
+    }
   }
 }
 
 .p-cta__box-link-text {
   display: inline-block;
   color: inherit;
+  font-family: $font-family-en;
   font-size: 16px;
   font-style: italic;
   font-weight: 500;
   padding-inline: 20px;
   text-align: center;
   width: 100%;
+
+  @include mq("md") {
+    font-size: 24px;
+  }
   
 }

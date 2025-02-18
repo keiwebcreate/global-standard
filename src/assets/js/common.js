@@ -5,9 +5,9 @@
   const viewport = document.querySelector('meta[name="viewport"]');
   // ビューポートを切り替える関数を定義
   function switchViewport() {
-    //   ウインドウサイズが390pxより多き場合はビューポートの値を変更する
+    //   ウインドウサイズが375pxより多き場合はビューポートの値を変更する
     const value =
-      window.outerWidth > 390
+      window.outerWidth > 375
         ? "width=device-width,initial-scale=1"
         : "width=375";
     // 現在のビューポートの値が新しい値と異なる場合、ビューポートの値を更新
@@ -37,13 +37,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   drawerIcon.addEventListener("click", function () {
     const isOpen = drawerIcon.classList.contains("is-open");
-    console.log(isOpen);
+    const header = document.querySelector("header");
+    const main = document.querySelector("main");
+    const footer = document.querySelector("footer");
+    const toTop = document.querySelector("#js-to-top");
     if (isOpen) {
       drawerIcon.setAttribute("aria-expanded", "false");
       drawer.setAttribute("aria-hidden", "true");
+      header.removeAttribute("inert", "true");
+      main.removeAttribute("inert", "true");
+      footer.removeAttribute("inert", "true");
+      toTop.removeAttribute("inert", "true");
+
     } else {
       drawerIcon.setAttribute("aria-expanded", "true");
       drawer.setAttribute("aria-hidden", "false");
+      header.setAttribute("inert", "true");
+      main.setAttribute("inert", "true");
+      footer.setAttribute("inert", "true");
+      toTop.setAttribute("inert", "true");
     }
   });
 

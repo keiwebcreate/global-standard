@@ -43,7 +43,7 @@
       <!-- p-footer__top -->
       <div class="p-footer__top">
         <div class="p-footer__logo">
-          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-footer__logo-link">Global standard</a>
+          <a href="<?php echo esc_url(home_url('/')); ?>" class="p-footer__logo-link">Global Standard</a>
         </div>
         <address class="p-footer__address">
           <p class="p-footer__zip-address">〒550-1000　大阪市西区土佐堀9-5-5

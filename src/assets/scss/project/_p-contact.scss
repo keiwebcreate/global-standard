@@ -1,0 +1,57 @@
+@use "../global/" as *;
+
+.p-contact {
+  margin-top: 49px;
+  margin-bottom: 99px;
+}
+
+.p-contact__inner {
+  padding-inline: 20px;
+}
+
+.p-contact__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: $line-height-large;
+}
+
+.p-contact__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.p-contact__form-wrap {
+  margin-top: 40px;
+}
+
+.p-contact__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.p-contact__privacy {
+}
+
+.p-contact__checkbox {
+}
+
+.p-contact__checkbox-input {
+}
+
+.p-contact__checkbox-text {
+}
+
+.p-contact__button {
+}
+
+.p-contact__submit {
+}

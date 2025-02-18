@@ -78,6 +78,9 @@
 <?php wp_footer(); ?>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js" defer></script>
+<?php if (is_page('contact')): ?>
+<script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/contact.js" defer></script>
+<?php endif; ?>
 <script src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/js/common.js" defer></script>
 </body>
 

@@ -158,7 +158,4 @@ function wpcf7_autop_return_false()
 {
   return false;
 }
-
-add_action('wp_footer', 'redirect_to_thanks_page');
-
 ?>

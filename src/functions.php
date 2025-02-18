@@ -152,4 +152,13 @@ function set_archive_description_form($args)
   echo $tmp;
 }
 
+// Contact Form 7で自動挿入されるPタグ、brタグを削除
+add_filter('wpcf7_autop_or_not', 'wpcf7_autop_return_false');
+function wpcf7_autop_return_false()
+{
+  return false;
+}
+
+add_action('wp_footer', 'redirect_to_thanks_page');
+
 ?>

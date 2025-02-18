@@ -26,7 +26,8 @@
     <p class="p-contact__text">研修のお申し込み、その他お問い合わせは、下記のフォームからお問い合わせ内容をご記入ください。<br>2日以内に担当者からメールにてご連絡いたします。</p>
     <h2 class="p-contact__title">お問い合わせ</h2>
     <div class="p-contact__form-wrap">
-      <form class="p-contact__form">
+      <?php echo do_shortcode('[contact-form-7 id="d5750da" title="お問い合わせ"]'); ?>
+      <!-- <form class="p-contact__form">
         <div class="p-contact__fields">
           <div class="p-contact__field p-contact-field">
             <div class="p-contact-field__head">
@@ -102,7 +103,7 @@
         <div class="p-contact__button">
           <input type="submit" value="送信" class="p-contact__submit" />
         </div>
-      </form>
+      </form> -->
     </div>
   </div>
 </section>

@@ -29,29 +29,62 @@
 .p-contact__fields {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16.9px;
 }
 
 .p-contact__field {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 7.6px;
 }
 
 .p-contact__privacy {
-}
+  margin-top: 43px;
+  text-align: center;
 
-.p-contact__checkbox {
-}
-
-.p-contact__checkbox-input {
+  label {
+    pointer-events: auto;
+  }
 }
 
 .p-contact__checkbox-text {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  
+
+  a {
+    display: inline-block;
+    color: map-get($map: $color, $key: text);
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    padding-right: 6px;
+  }
+
+ 
 }
 
 .p-contact__button {
+  margin-top: 43px;
+  text-align: center;
 }
 
 .p-contact__submit {
+  border: 1px solid currentColor;
+  color: map-get($map: $color, $key: text2);
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  min-width: 295px;
+  min-height: 72px;
+  padding-block: 15px;
+  padding-inline: 20px;
+  text-align: center;
 }

@@ -46,6 +46,15 @@
   }
 }
 
+.p-contact-field__body--height {
+  height: 44px;
+  overflow: hidden;
+  
+  span input {
+    translate: 0 -25px;
+  }
+}
+
 .p-contact-field__input-text {
   padding-block: 11px;
   padding-inline: 15px;
@@ -61,11 +70,11 @@
     background: url(../img/contact/contact-icon-select.svg) no-repeat center
       center / contain;
     position: absolute;
-    width: 22px;
-    height: 16px;
-    top: 50%;
+    width: 17px;
+    height: 8px;
+    top: calc(50% - 2px);
     translate: 0 -50%;
-    right: 10px;
+    right: 12px;
   }
 }
 
@@ -86,6 +95,5 @@
 .p-contact-field__textarea {
   padding-block: 11px;
   padding-inline: 15px;
-  min-height: 140px;
-  resize: vertical;
+  height: 140px;
 }

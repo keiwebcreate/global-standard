@@ -1,0 +1,65 @@
+@use "../global/" as *;
+
+.wpcf7-list-item {
+}
+input[type="checkbox"] {
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  position: absolute;
+
+  &:checked + .wpcf7-list-item-label::after {
+    opacity: 1;
+  }
+}
+.wpcf7-list-item-label {
+  display: inline-block;
+  padding-left: 38px;
+  position: relative;
+  margin-left: -16px;
+  a {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+  }
+
+  span {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #3e3e3e;
+    left: 0;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 10px;
+    background: url(../img/contact/contact-icon-check.svg) no-repeat center
+      center / contain;
+    top: 50%;
+    translate: 0 -50%;
+    left: 7px;
+    opacity: 0;
+  }
+}
+
+.wpcf7-spinner {
+  display: none;
+}

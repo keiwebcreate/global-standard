@@ -12,6 +12,10 @@
 .p-contact-field__label {
   font-size: 14px;
   font-weight: 700;
+
+  @include mq("md") {
+    font-size: 18px;
+  }
 }
 
 .p-contact-field__required {
@@ -42,16 +46,20 @@
       color: #ccc;
       font-size: 14px;
       font-weight: 500;
+
+      @include mq("md") {
+        font-size: 16px;
+      }
     }
   }
 }
 
 .p-contact-field__body--height {
-  height: 44px;
+  height: 47px;
   overflow: hidden;
   
   span input {
-    translate: 0 -25px;
+    translate: 0 -23px;
   }
 }
 
@@ -60,6 +68,10 @@
   padding-inline: 15px;
   min-height: 44px;
   box-sizing: border-box;
+
+  &:focus {
+    outline: 1px solid map-get($map: $color, $key: text2);
+  }
 }
 
 .p-contact-field__body--select {
@@ -90,10 +102,26 @@
   &.is-selected {
     color: #1a1a1a;
   }
+
+  &:focus {
+    outline: 1px solid map-get($map: $color, $key: text2);
+  }
+
+  @include mq("md") {
+    font-size: 16px;
+  }
 }
 
 .p-contact-field__textarea {
   padding-block: 11px;
   padding-inline: 15px;
   height: 140px;
+
+  &:focus {
+    outline: 1px solid map-get($map: $color, $key: text2);
+  }
+
+  @include mq("md") {
+    height: 240px;
+  }
 }

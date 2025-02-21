@@ -3,10 +3,17 @@
 .p-contact {
   margin-top: 49px;
   margin-bottom: 99px;
+
+  @include mq("md") {
+    margin-top: 67px;
+    margin-bottom: 160px;
+  }
 }
 
 .p-contact__inner {
   padding-inline: 20px;
+  max-width: calc(688px + 20px * 2);
+  margin-inline: auto;
 }
 
 .p-contact__text {
@@ -20,22 +27,38 @@
   font-weight: 700;
   margin-top: 60px;
   text-align: center;
+
+  @include mq("md") {
+    margin-top: 80px;
+  }
 }
 
 .p-contact__form-wrap {
   margin-top: 40px;
+
+  @include mq("md") {
+    margin-top: 60px;
+  }
 }
 
 .p-contact__fields {
   display: flex;
   flex-direction: column;
   gap: 16.9px;
+
+  @include mq("md") {
+    gap: 29px;
+  }
 }
 
 .p-contact__field {
   display: flex;
   flex-direction: column;
   gap: 7.6px;
+
+  @include mq("md") {
+    gap: 12px;
+  }
 }
 
 .p-contact__privacy {
@@ -51,7 +74,6 @@
   display: inline-block;
   font-size: 14px;
   font-weight: 500;
-  
 
   a {
     display: inline-block;
@@ -66,13 +88,15 @@
     text-underline-position: from-font;
     padding-right: 6px;
   }
-
- 
 }
 
 .p-contact__button {
   margin-top: 43px;
   text-align: center;
+
+  @include mq("md") {
+    margin-top: 48px;
+  }
 }
 
 .p-contact__submit {
@@ -87,4 +111,16 @@
   padding-block: 15px;
   padding-inline: 20px;
   text-align: center;
+
+  &:focus {
+    outline: 1px solid map-get($map: $color, $key: text2);
+  }
+
+  &:disabled {
+    color: map-get($map: $color, $key: main-thin);
+  }
+
+  @include mq("md") {
+    font-size: 16px;
+  }
 }

@@ -11,12 +11,24 @@ input[type="checkbox"] {
   &:checked + .wpcf7-list-item-label::after {
     opacity: 1;
   }
+
+  &:focus + .wpcf7-list-item-label::before {
+    outline: 1px solid map-get($map: $color, $key: text2);
+  }
 }
 .wpcf7-list-item-label {
   display: inline-block;
   padding-left: 38px;
   position: relative;
   margin-left: -16px;
+
+  @include mq("md") {
+    padding-left: 42px;
+    margin-left: -17px;
+    display: flex;
+    gap: 10px;
+  }
+
   a {
     display: inline-block;
     font-size: 14px;
@@ -27,12 +39,20 @@ input[type="checkbox"] {
     text-decoration-thickness: auto;
     text-underline-offset: auto;
     text-underline-position: from-font;
+
+    @include mq("md") {
+      font-size: 16px;
+    }
   }
 
   span {
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
+
+    @include mq("md") {
+      font-size: 16px;
+    }
   }
 
   &::before {
@@ -44,6 +64,11 @@ input[type="checkbox"] {
     left: 0;
     top: 50%;
     translate: 0 -50%;
+
+    @include mq("md") {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &::after {

@@ -39,48 +39,6 @@
         <h2 class="p-download__form-head">資料ダウンロード</h2>
         <div class="p-download__form-body">
           <?php echo do_shortcode('[contact-form-7 id="6ef018c" title="ダウンロード"]'); ?>
-          <!-- <form action="" class="p-download__form">
-            <div class="p-download__fields">
-              <div class="p-download__field p-download-field">
-                <div class="p-download-field__head">
-                  <label for="" class="p-download-field__label">会社名</label>
-                </div>
-                <div class="p-download-field__body">
-                  <input type="text" class="p-download-field__input-text">
-                </div>
-              </div>
-              <div class="p-download__field p-download-field">
-                <div class="p-download-field__head">
-                  <label for="" class="p-download-field__label">部署</label>
-                </div>
-                <div class="p-download-field__body"></div>
-              </div>
-              <div class="p-download__field p-download-field">
-                <div class="p-download-field__head">
-                  <label for="" class="p-download-field__label">お名前</label>
-                  <span class="p-download-field__required">必須</span>
-                </div>
-                <div class="p-download-field__body"></div>
-              </div>
-              <div class="p-download__field p-download-field">
-                <div class="p-download-field__head">
-                  <label for="" class="p-download-field__label">お名前（フリガナ）</label>
-                  <span class="p-download-field__required">必須</span>
-                </div>
-                <div class="p-download-field__body"></div>
-              </div>
-              <div class="p-download__field p-download-field">
-                <div class="p-download-field__head">
-                  <label for="" class="p-download-field__label">メールアドレス</label>
-                  <span class="p-download-field__required">必須</span>
-                </div>
-                <div class="p-download-field__body"></div>
-              </div>
-            </div>
-            <div class="p-download-field__check">
-            </div>
-            <div class="p-download-field___submit"></div>
-          </form> -->
         </div>
       </div>
       <!-- /p-download__form-wrap -->
